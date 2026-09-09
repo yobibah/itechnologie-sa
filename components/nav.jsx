@@ -102,7 +102,7 @@ export function Header() {
         <header className="bg-white sticky top-0 z-50 shadow-sm">
           <div className=" mx-auto px-4 sm:px-1 lg:px-2">
             <div className="h-20 flex items-center justify-between gap-2">
-              {/* LOGO */}
+    
               <div className="flex-shrink-0">
                 <Link
                   href="/"
