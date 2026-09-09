@@ -112,13 +112,13 @@ export function Header() {
                     src="/logo.jpg"
                     alt="Logo ITECHNOLOGIE SA"
                     width={320}
-                    height={88}
+                    height={10}
                     className="
                       w-28
                       sm:w-36
                       md:w-44
                       lg:w-48
-                      h-auto
+               
                       max-h-10
                       sm:max-h-12
                       md:max-h-14
