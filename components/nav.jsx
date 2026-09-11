@@ -44,7 +44,8 @@ export function Header() {
         { name: "Infogérance & Services Managés", path: "/solutions/infogerance-services-manages" },
       ],
     },
-    { name: "NOS PARTENAIRES", path: "/partenaires" },
+    { 
+      name: "NOS PARTENAIRES", path: "/partenaires" },
     { name: "NOS EVENEMENTS", path: "/evenements" },
     { name: "NOS REFERENCES", path: "/references" },
     { name: "NOUS CONTACTER", path: "/contact" },
@@ -109,7 +110,7 @@ export function Header() {
                   className="flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 rounded-lg"
                 >
                   <Image
-                    src="/logo.jpg"
+                    src="/logos.jpg"
                     alt="Logo ITECHNOLOGIE SA"
                     width={320}
                     height={88}
