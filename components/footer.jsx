@@ -24,7 +24,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="relative bg-red-950 text-white">
+    <footer className="relative bg-black text-white">
 
       <div className="mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
       
