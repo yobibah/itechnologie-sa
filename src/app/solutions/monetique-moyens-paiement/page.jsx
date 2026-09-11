@@ -1,3 +1,35 @@
-export default function monetique() {
-  return <div className="flex px-3">monetique</div>;
+import SolutionHero from '../../../../components/ui/solutions/SolutionHero'
+import SolutionIntro from '../../../../components/ui/solutions/SolutionIntro'
+import SolutionApproach from '../../../../components/ui/solutions/SolutionApproach'
+import SolutionServices from '../../../../components/ui/solutions/SolutionServices'
+
+import { monetiquePaiement } from '../../../../data/solutions/monetique'
+
+export default function MonetiqueMoyensPaiementPage() {
+  const solution = monetiquePaiement
+
+  return (
+    <main>
+      <SolutionHero
+        title={solution.title}
+        tagline={solution.heroTagline}
+        image={solution.heroImage}
+        imageAlt={solution.heroImageAlt}
+      />
+
+      <SolutionIntro
+        label={solution.introLabel}
+        title={solution.introTitle}
+        paragraphs={solution.introParagraphs}
+      />
+
+      <SolutionApproach
+        paragraph={solution.approachParagraph}
+      />
+
+      <SolutionServices
+        services={solution.services}
+      />
+    </main>
+  )
 }
