@@ -1,3 +1,4 @@
+import Contactbarnner from "../../components/ui/home/contact-barnner";
 import ExpertiseBarnner from "../../components/ui/home/expertise-barnner";
 import HomeBarnner from "../../components/ui/home/home-barnner";
 import PartenairesBanner from "../../components/ui/home/partenaire-barnaire";
@@ -13,6 +14,7 @@ export default function Home() {
       <ExpertiseBarnner />
       <UsBarnner />
       <RepresentationBarnner/>
+      <Contactbarnner/>
     </>
   );
 }

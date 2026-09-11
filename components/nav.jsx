@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-import { Menu, X, PhoneCall, Mail, ChevronDown } from "lucide-react";
+import { Menu, X, PhoneCall, Mail, ChevronDown, Flag } from "lucide-react";
 import { SocialIcon } from "react-social-icons";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -35,13 +35,34 @@ export function Header() {
       name: "NOS SOLUTIONS",
       path: "/solutions",
       children: [
-        { name: "Solutions Informatiques", path: "/solutions/developpement-informatique" },
-        { name: "Réseau & cybersécurité", path: "/solutions/reseaux-cyber-securite" },
-        { name: "Énergie & Technologies du bâtiment", path: "/solutions/energie-technologie-batiment" },
-        { name: "Télécommunications & Data", path: "/solutions/telecommuniaction-data" },
-        { name: "Monétique & Moyens de paiement", path: "/solutions/monetique-moyens-paiement" },
-        { name: "Gouvernance & Audit Systèmes IT", path: "/solutions/gouvernance-audit-systemes-IT" },
-        { name: "Infogérance & Services Managés", path: "/solutions/infogerance-services-manages" },
+        {
+          name: "Solutions Informatiques",
+          path: "/solutions/developpement-informatique",
+        },
+        {
+          name: "Réseau & cybersécurité",
+          path: "/solutions/reseaux-cyber-securite",
+        },
+        {
+          name: "Énergie & Technologies du bâtiment",
+          path: "/solutions/energie-technologie-batiment",
+        },
+        {
+          name: "Télécommunications & Data",
+          path: "/solutions/telecommuniaction-data",
+        },
+        {
+          name: "Monétique & Moyens de paiement",
+          path: "/solutions/monetique-moyens-paiement",
+        },
+        {
+          name: "Gouvernance & Audit Systèmes IT",
+          path: "/solutions/gouvernance-audit-systemes-IT",
+        },
+        {
+          name: "Infogérance & Services Managés",
+          path: "/solutions/infogerance-services-manages",
+        },
       ],
     },
     { name: "NOS PARTENAIRES", path: "/partenaires" },
@@ -55,24 +76,84 @@ export function Header() {
     return pathname.startsWith(path);
   };
 
+  const contact = [
+    {
+      pays: "Burkina Faso",
+      telephone: "+226 68 08 02 02",
+      email: "info@itechnologiesa.com",
+    },
+    {
+      pays: "Republique de Guinée",
+      telephone: "+224 620 92 48 33",
+      email: "info@itechnologiesa.com",
+    },
+  ];
+  const [curentIndex, setCurrentIndex] = useState(0);
+  const [items, setItems] = useState({});
+  useEffect(() => {
+    setItems(contact[curentIndex]);
+    const timer = setTimeout(() => {
+      setCurrentIndex((prev) => (prev + 1) % contact.length);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [curentIndex]);
+
+  // console.log('items',items)
+
   return (
     <>
-
       <div className="w-full ">
         <div className="w-full bg-red-950">
           <div className=" mx-auto px-4 sm:px-6 lg:px-8">
             <div className="h-10 flex items-center justify-between">
-              <div className="hidden md:flex items-center gap-4 text-white text-sm">
-                <div className="flex items-center gap-2">
-                  <PhoneCall size={14} />
-                  <span className="font-medium">+226 09 98 02 02</span>
-                </div>
-                <span className="text-red-300">|</span>
-                <div className="flex items-center gap-2">
-                  <Mail size={14} />
-                  <span className="font-medium">itechnologiesa@gmail.com</span>
-                </div>
-              </div>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={`${items.pays}-${items.telephone}`}
+                  initial={{ opacity: 0, y: -8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 8 }}
+                  transition={{
+                    duration: 0.4,
+                    ease: "easeOut",
+                  }}
+                  className="hidden md:flex items-center gap-4 text-white text-sm"
+                >
+                  <motion.div
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: 0.05 }}
+                    className="flex items-center gap-2"
+                  >
+                    <Flag size={14} />
+                    <span className="font-medium">{items.pays}</span>
+                  </motion.div>
+
+                  <span className="text-red-300">|</span>
+
+                  <motion.div
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: 0.1 }}
+                    className="flex items-center gap-2"
+                  >
+                    <PhoneCall size={14} />
+                    <span className="font-medium">{items.telephone}</span>
+                  </motion.div>
+
+                  <span className="text-red-300">|</span>
+
+                  <motion.div
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: 0.15 }}
+                    className="flex items-center gap-2"
+                  >
+                    <Mail size={14} />
+                    <span className="font-medium">{items.email}</span>
+                  </motion.div>
+                </motion.div>
+              </AnimatePresence>
 
               <div className="hidden md:flex items-center gap-2 ml-auto md:ml-0">
                 <SocialIcon
@@ -98,11 +179,9 @@ export function Header() {
           </div>
         </div>
 
-
         <header className="bg-white sticky top-0 z-50 shadow-sm">
           <div className=" mx-auto px-4 sm:px-1 lg:px-2">
             <div className="h-20 flex items-center justify-between gap-2">
-    
               <div className="flex-shrink-0">
                 <Link
                   href="/"
@@ -166,7 +245,6 @@ export function Header() {
                           />
                         </button>
 
-                  
                         <div
                           className="
                             absolute
@@ -271,7 +349,6 @@ export function Header() {
             </div>
           </div>
 
-      
           <AnimatePresence>
             {isMobileMenuOpen && (
               <motion.div
