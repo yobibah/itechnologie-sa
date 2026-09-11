@@ -44,7 +44,8 @@ export function Header() {
         { name: "Infogérance & Services Managés", path: "/solutions/infogerance-services-manages" },
       ],
     },
-    { name: "NOS PARTENAIRES", path: "/partenaires" },
+    { 
+      name: "NOS PARTENAIRES", path: "/partenaires" },
     { name: "NOS EVENEMENTS", path: "/evenements" },
     { name: "NOS REFERENCES", path: "/references" },
     { name: "NOUS CONTACTER", path: "/contact" },
