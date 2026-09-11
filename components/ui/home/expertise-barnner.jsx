@@ -27,7 +27,7 @@ export default function ExpertiseBarnner() {
     },
   ];
 
-  // Variants pour l’animation en cascade des cartes
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

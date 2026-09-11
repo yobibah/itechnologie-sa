@@ -109,10 +109,10 @@ export function Header() {
                   className="flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 rounded-lg"
                 >
                   <Image
-                    src="/logo.jpg"
+                    src="/logo.png"
                     alt="Logo ITECHNOLOGIE SA"
-                    width={320}
-                    height={88}
+                    width={88}
+                    height={28}
                     className="
                       w-28
                       sm:w-36
@@ -265,7 +265,7 @@ export function Header() {
                   aria-label="Menu"
                   aria-expanded={isMobileMenuOpen}
                 >
-                  {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+                  {isMobileMenuOpen ? <X size={27} /> : <Menu size={27} />}
                 </button>
               </div>
             </div>
