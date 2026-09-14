@@ -6,7 +6,7 @@ export const reseauCybersecurite = {
     'Construire une infrastructure connectée, performante et sécurisée.',
   heroImage:
     //'https://cdn.magicpatterns.com/patterns/generated-images/dd47a8b7-708f-4e7a-9a1a-83eca56b80ac.jpg',
-    '../../images/solutions/Cybersecurite.webp',
+    '../../images/solutions/cyber.jpg',
   heroImageAlt:
     'Centre d’opérations de sécurité avec analystes devant un mur d’écrans de supervision',
   introLabel: 'Réseau & cybersécurité',
