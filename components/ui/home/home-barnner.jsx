@@ -362,6 +362,7 @@ export default function HomeBanner() {
             bottom-8
             left-8
             z-20
+          
             flex
             gap-2
           "
@@ -406,7 +407,8 @@ export default function HomeBanner() {
             bottom-4
             right-4
             z-20
-            flex
+            hidden
+            sm:flex
             gap-3
           "
         >
