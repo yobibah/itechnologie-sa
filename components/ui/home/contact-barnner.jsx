@@ -15,7 +15,6 @@ export default function Contactbarnner() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="relative overflow-hidden rounded-lg bg-gradient-to-r from-red-950 via-red-900 to-red-800 px-6 py-8 sm:px-10 sm:py-10 lg:px-14">
-
         <motion.div
           className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-red-700/30 blur-3xl"
           animate={{
@@ -42,8 +41,6 @@ export default function Contactbarnner() {
         />
 
         <div className="relative z-10 flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
-          
-    
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -61,14 +58,15 @@ export default function Contactbarnner() {
             </h2>
 
             <p className="text-sm font-medium leading-6 text-red-100 sm:text-base">
-              Nous accompagnons depuis plus de 15 ans les grandes entreprises
-              en Afrique dans leurs choix technologiques et dans la mise à
-              profit des technologies au service de la performance commerciale
-              et de la résilience technologique.
+              Depuis plus de 9 ans, Itechnologie contribue à la transformation
+              numérique des entreprises et des institutions en Afrique. Notre
+              expertise nous permet de concevoir et d’intégrer des solutions
+              technologiques fiables, pensées pour améliorer la performance,
+              accompagner l’innovation et renforcer durablement la résilience de
+              nos clients.
             </p>
           </motion.div>
 
-  
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -77,13 +75,13 @@ export default function Contactbarnner() {
           >
             <motion.button
               onClick={() => router.push("/contact")}
-            //   whileHover={{
-            //     scale: 1.05,
-            //     x: 4,
-            //   }}
-            //   whileTap={{
-            //     scale: 0.95,
-            //   }}
+              //   whileHover={{
+              //     scale: 1.05,
+              //     x: 4,
+              //   }}
+              //   whileTap={{
+              //     scale: 0.95,
+              //   }}
               className="group flex items-center gap-3 rounded-md border border-white/30 bg-white px-5 py-3 text-sm font-black text-red-900 shadow-lg transition-colors duration-300 hover:bg-red-50 sm:px-6 sm:py-4"
             >
               <span>Nous contacter</span>

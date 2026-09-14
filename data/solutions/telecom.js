@@ -5,7 +5,7 @@ export const telecomData = {
   heroTagline:
     'Des infrastructures de communication performantes pour connecter durablement les organisations.',
   heroImage:
-    '../../images/solutions/Telecommunications-1.png',
+    '../../images/solutions/telecom.jpg',
   heroImageAlt:
     'Technicien raccordant des jarretières optiques sur un répartiteur de télécommunications',
   introLabel: 'Télécommunications & data',

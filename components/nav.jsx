@@ -27,7 +27,7 @@ export function Header() {
       path: "/about",
       children: [
         { name: "À propos de nous", path: "/about" },
-        { name: "Notre histoire", path: "/about/histoire" },
+        { name: "Mots du DG", path: "/about/mots-du-DG" },
         { name: "Notre équipe", path: "/about/equipe" },
       ],
     },
@@ -65,8 +65,10 @@ export function Header() {
         },
       ],
     },
-    { 
-      name: "NOS PARTENAIRES", path: "/partenaires" },
+    {
+      name: "NOS PARTENAIRES",
+      path: "/partenaires",
+    },
     { name: "NOS EVENEMENTS", path: "/evenements" },
     { name: "NOS REFERENCES", path: "/references" },
     { name: "NOUS CONTACTER", path: "/contact" },
@@ -151,7 +153,12 @@ export function Header() {
                     className="flex items-center gap-2"
                   >
                     <Mail size={14} />
-                    <span className="font-medium">{items.email}</span>
+                    <a
+                      href="mailto:info@itechnologiesa.com"
+                      className="font-medium"
+                    >
+                      {items.email}
+                    </a>
                   </motion.div>
                 </motion.div>
               </AnimatePresence>

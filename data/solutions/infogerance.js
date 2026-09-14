@@ -5,7 +5,7 @@ export const infogeranceServices = {
   heroTagline:
     'Optimisez l’exploitation de votre système d’information grâce à un accompagnement IT fiable et continu.',
   heroImage:
-    'https://cdn.magicpatterns.com/patterns/generated-images/ceef693a-91b0-4036-9af9-e7a3205426bd.jpg',
+   '../../images/solutions/infogerance.jpg',
   heroImageAlt:
     'Équipe de support informatique iTechnologie au travail dans un centre de services',
 
@@ -36,7 +36,7 @@ export const infogeranceServices = {
         'Suivi des interventions et des équipements',
       ],
       image:
-        'https://cdn.magicpatterns.com/patterns/generated-images/b1585a19-10be-4371-8ab1-0be5b2bfa500.jpg',
+       '../../images/solutions/TMA.webp',
       imageAlt:
         'Technicien réalisant une opération de maintenance informatique',
     },
@@ -53,7 +53,7 @@ export const infogeranceServices = {
         'Accompagnement des utilisateurs',
       ],
       image:
-        'https://cdn.magicpatterns.com/patterns/generated-images/1352ccc9-9536-4403-b82b-d8b0653ff7a7.jpg',
+        '../../images/solutions/HELPDESK-SUPPORT.png',
       imageAlt:
         'Équipe informatique assurant le support des utilisateurs',
     },
@@ -70,7 +70,7 @@ export const infogeranceServices = {
         'Maintien en conditions opérationnelles',
       ],
       image:
-        'https://cdn.magicpatterns.com/patterns/generated-images/73250c49-bab5-4e62-8932-06b8dc7bc2f2.jpg',
+        '../../images/solutions/MCO.png',
       imageAlt:
         'Centre de supervision informatique avec écrans de monitoring',
     },
@@ -87,7 +87,7 @@ export const infogeranceServices = {
         'Optimisation des infrastructures virtualisées',
       ],
       image:
-        'https://cdn.magicpatterns.com/patterns/generated-images/c07ce929-3ce5-4ad2-9892-f4598e155543.jpg',
+        '../../images/solutions/cloud.webp',
       imageAlt:
         'Infrastructure informatique virtualisée et services cloud',
     },
@@ -104,7 +104,7 @@ export const infogeranceServices = {
         'Suivi des renouvellements et équipements',
       ],
       image:
-        'https://cdn.magicpatterns.com/patterns/generated-images/7e227641-535a-470b-acd1-5434b84f80c2.jpg',
+        '../../images/solutions/gestion-parc-informatique.jpg',
       imageAlt:
         'Gestion d’un parc informatique professionnel',
     },

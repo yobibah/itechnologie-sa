@@ -5,7 +5,7 @@ export const gouvernanceAudit = {
   heroTagline:
     'Évaluer, structurer et faire évoluer votre système d’information pour accompagner durablement vos objectifs.',
   heroImage:
-    'https://cdn.magicpatterns.com/patterns/generated-images/c85e53f0-6cf9-4d5e-8c31-65d63d66244e.jpg',
+    '../../images/solutions/audit-info.jpg',
   heroImageAlt:
     'Comité de direction examinant les enjeux et la stratégie du système d’information',
 
@@ -36,7 +36,7 @@ export const gouvernanceAudit = {
         'Identification des écarts et recommandations',
       ],
       image:
-        'https://cdn.magicpatterns.com/patterns/generated-images/ab1e69de-4bc9-4b9e-94ec-3b814264b243.jpg',
+        '../../images/solutions/audit-conformite.png',
       imageAlt:
         'Professionnels analysant les résultats d’un audit informatique',
     },
@@ -53,7 +53,7 @@ export const gouvernanceAudit = {
         'Planification des investissements IT',
       ],
       image:
-        'https://cdn.magicpatterns.com/patterns/generated-images/f2a55a41-5002-4e55-b07d-757ac46921e5.jpg',
+        '../../images/solutions/schema.jpg',
       imageAlt:
         'Présentation d’une feuille de route stratégique pour un système informatique',
     },
@@ -70,7 +70,7 @@ export const gouvernanceAudit = {
         'Élaboration du plan de reprise d’activité',
       ],
       image:
-        'https://cdn.magicpatterns.com/patterns/generated-images/b1aae55a-78be-4b70-b324-7fb27869cafe.jpg',
+        '../../images/solutions/plan.webp',
       imageAlt:
         'Infrastructure informatique conçue pour assurer la continuité des activités',
     },
@@ -87,7 +87,7 @@ export const gouvernanceAudit = {
         'Accompagnement des professionnels IT',
       ],
       image:
-        'https://cdn.magicpatterns.com/patterns/generated-images/1e05a64b-adcc-4fe7-b9b9-5e9d38a57c59.jpg',
+        '../../images/solutions/formation.jpg',
       imageAlt:
         'Formation professionnelle dans le domaine des technologies informatiques',
     },
@@ -104,7 +104,7 @@ export const gouvernanceAudit = {
         'Accompagnement des projets de transformation',
       ],
       image:
-        'https://cdn.magicpatterns.com/patterns/generated-images/1352ccc9-9536-4403-b82b-d8b0653ff7a7.jpg',
+       '../../images/solutions/Strategie-digitale.jpg',
       imageAlt:
         'Consultants accompagnant une organisation dans sa stratégie informatique',
     },

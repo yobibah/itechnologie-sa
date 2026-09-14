@@ -6,7 +6,7 @@ export const energieBatiment = {
     'Des solutions intelligentes pour des bâtiments plus sûrs, connectés et performants.',
   heroImage:
     //'https://cdn.magicpatterns.com/patterns/generated-images/f29e5693-772a-4937-85c4-6539b60f899d.jpg',
-    '../../images/solutions/energie.jpeg',
+    '../../images/solutions/batiment.jpg',
   heroImageAlt:
     'Façade d’un immeuble de bureaux intelligent équipé de dispositifs de sûreté, à la tombée du jour',
   introLabel: 'Énergie & technologies du bâtiment',
