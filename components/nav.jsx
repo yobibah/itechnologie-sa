@@ -141,7 +141,8 @@ export function Header() {
                     className="flex items-center gap-2"
                   >
                     <PhoneCall size={14} />
-                    <span className="font-medium">{items.telephone}</span>
+                    <a      href={`tel:${items.telephone}`} 
+                    className="font-medium">{items.telephone}</a>
                   </motion.div>
 
                   <span className="text-red-300">|</span>
@@ -188,7 +189,7 @@ export function Header() {
         </div>
 
         <header className="bg-white sticky top-0 z-50 shadow-sm">
-          <div className=" mx-auto px-4 sm:px-1 lg:px-2">
+          <div className=" mx-auto px-4 sm:px-4 lg:px-16">
             <div className="h-20 flex items-center justify-between gap-2">
               <div className="flex-shrink-0">
                 <Link

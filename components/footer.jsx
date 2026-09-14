@@ -89,7 +89,7 @@ export function Footer() {
             <div className="w-16 h-px bg-red-700 my-3 lg:ml-auto" />
 
             <a
-              href="tel:+22609980202"
+              href="tel:+22668080202"
               className="text-red-200 text-sm leading-relaxed hover:text-white transition-colors"
             >
               +226 68 08 02 02
