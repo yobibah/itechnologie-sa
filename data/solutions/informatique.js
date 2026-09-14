@@ -10,7 +10,7 @@ export const solutionsInformatiques = {
 
   heroImage:
     // 'https://cdn.magicpatterns.com/patterns/generated-images/4ad2b2d1-2111-4314-a28c-dd88d3a5ac51.jpg',
-    '../../images/solutions/solution_HD.png',
+    '../../images/solutions/network.jpeg',
 
   heroImageAlt:
     'Deux ingénieurs iTechnologie intervenant sur une baie de serveurs en salle technique',

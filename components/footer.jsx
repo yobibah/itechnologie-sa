@@ -1,10 +1,9 @@
-
 "use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUp } from "lucide-react";
-
+import { motion } from "framer-motion";
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -25,15 +24,11 @@ export function Footer() {
 
   return (
     <footer className="relative bg-black text-white">
-
       <div className="mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
-      
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-14">
           <h2 className="text-2xl sm:text-3xl font-light text-white max-w-xl">
             ITECHNOLOGIE, votre partenaire{" "}
-            <span className="font-semibold">
-              technologique de confiance
-            </span>
+            <span className="font-semibold">technologique de confiance</span>
           </h2>
 
           <Image
@@ -45,9 +40,7 @@ export function Footer() {
           />
         </div>
 
-     
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
-    
           <div>
             <h3 className="text-sm font-bold uppercase tracking-wider mb-3 text-white">
               ITECHNOLOGIE - Siège
@@ -58,14 +51,14 @@ export function Footer() {
             </p>
           </div>
 
-        
           <div>
             <h3 className="text-sm font-bold uppercase tracking-wider mb-3 text-white">
               Nos solutions
             </h3>
 
             <p className="text-red-200 text-sm leading-relaxed">
-              Informatique - Réseaux &amp; Cybersécurité - Énergie &amp; Bâtiment
+              Informatique - Réseaux &amp; Cybersécurité - Énergie &amp;
+              Bâtiment
               <br />
               Télécoms &amp; Data - Monétique
             </p>
@@ -81,26 +74,25 @@ export function Footer() {
             </p>
           </div>
 
-        
           <div className="lg:text-right">
             <h3 className="text-sm font-bold uppercase tracking-wider mb-3 text-white">
               Contact
             </h3>
 
             <a
-              href="mailto:itechnologiesa@gmail.com"
+              href="mailto:info@itechnologiesa.com"
               className="text-red-200 text-sm hover:text-white transition-colors"
             >
-              itechnologiesa@gmail.com
+              info@itechnologiesa.com
             </a>
 
             <div className="w-16 h-px bg-red-700 my-3 lg:ml-auto" />
 
             <a
-              href="tel:+22609980202"
+              href="tel:+22668080202"
               className="text-red-200 text-sm leading-relaxed hover:text-white transition-colors"
             >
-              +226 09 98 02 02
+              +226 68 08 02 02
             </a>
           </div>
         </div>
@@ -108,10 +100,8 @@ export function Footer() {
 
       <div className="border-t border-red-900" />
 
-    
       <div className="mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-       
           <nav
             className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2"
             aria-label="Navigation du pied de page"
@@ -127,43 +117,50 @@ export function Footer() {
             ))}
           </nav>
 
-          <p className="text-red-300 text-sm whitespace-nowrap">
-            © {currentYear} ITECHNOLOGIE SA
-          </p>
-        </div>
-      </div>
+          <div className="flex justify-center items-center gap-10">
+            <p className="text-red-300 text-sm whitespace-nowrap">
+              © {currentYear} ITECHNOLOGIE SA
+            </p>
 
+            <motion.button
+              animate={{ y: [0, 10, 0] }}
+              transition={{
+                duration: 2.5,
+
+                ease: "easeInOut",
+              }}
+              type="button"
+              onClick={scrollToTop}
+              aria-label="Retour en haut"
+              title="Retour en haut"
+              className="
+        shrink-0
+        
    
-      <button
-        type="button"
-        onClick={scrollToTop}
-        aria-label="Retour en haut"
-        title="Retour en haut"
-        className="
-          absolute
-          bottom-6
           right-6
-          sm:bottom-8
+        
           sm:right-8
           w-11
           h-11
           flex
           items-center
           justify-center
-          bg-red-600
+          bg-red-900/50
           hover:bg-red-500
           text-white
-          rounded-md
+          rounded-full
           shadow-lg
           transition-colors
           focus-visible:outline-none
           focus-visible:ring-2
           focus-visible:ring-red-300
         "
-      >
-        <ArrowUp size={20} />
-      </button>
+            >
+              <ArrowUp size={20} />
+            </motion.button>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }
-

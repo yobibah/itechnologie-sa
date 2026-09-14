@@ -41,7 +41,7 @@ export default function SolutionIntro({
             </div>
 
             <a
-              href="#contact"
+              href="/contact"
               className="group mt-10 inline-flex items-center gap-3 border border-[#DDE3EC] px-6 py-3.5 text-[13px] font-semibold text-[#0B1A38] transition-colors duration-150 ease-institutional hover:border-[#0B1A38] hover:bg-[#0B1A38] hover:text-white"
             >
               Échanger avec un expert

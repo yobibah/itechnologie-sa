@@ -170,7 +170,8 @@ export default function ContactSection() {
             <div className="relative flex-1">
               <iframe
                 title="Localisation ITECHNOLOGIE"
-                src="https://www.google.com/maps?q=12.3069993,-1.5296662&z=17&output=embed"
+                //src="https://www.google.com/maps?q=12.3069993,-1.5296662&z=17&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3715.405606789604!2d-1.5296661999999996!3d12.3069993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2e970060b18aab%3A0xeb2c50ec26aa5743!2sITECHNOLOGIE!5e1!3m2!1sen!2sbf!4v1789137936898!5m2!1sen!2sbf" 
                 className="absolute inset-0 h-full w-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

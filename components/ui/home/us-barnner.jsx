@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import bf from "../../../public/images/global.png";
+import bf from "../../../public/images/about/itech.png";
 import { useRouter } from "next/navigation";
 
 export default function UsBanner() {

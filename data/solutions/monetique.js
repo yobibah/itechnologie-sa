@@ -5,7 +5,7 @@ export const monetiquePaiement = {
   heroTagline:
     'Des solutions de paiement modernes, sécurisées et adaptées aux besoins des organisations.',
   heroImage:
-    '../../images/solutions/monetique.png',
+    '../../images/solutions/monnaie.jpg',
   heroImageAlt:
     'Client réglant un achat par carte bancaire sur un terminal de paiement en boutique',
   introLabel: 'Monétique & moyens de paiement',
@@ -30,7 +30,7 @@ export const monetiquePaiement = {
         'Intégration aux systèmes de gestion',
       ],
       image:
-        'https://cdn.magicpatterns.com/patterns/generated-images/3e3393ff-5d07-40d2-9163-6184a1908e8f.jpg',
+        '../../images/solutions/retail.png',
       imageAlt:
         'Scanner professionnel utilisé dans un environnement de commerce et de vente',
     },
@@ -46,7 +46,7 @@ export const monetiquePaiement = {
         'Mobilité et facilité d’utilisation',
       ],
       image:
-        'https://cdn.magicpatterns.com/patterns/generated-images/930002bd-b242-45a4-a9e6-622f4ced2d03.jpg',
+        '../../images/solutions/GIM-UEMOA_une-770x470.webp',
       imageAlt:
         'Terminal de paiement Android utilisé pour une transaction électronique',
     },
@@ -62,7 +62,7 @@ export const monetiquePaiement = {
         'Optimisation du traitement des espèces',
       ],
       image:
-        'https://cdn.magicpatterns.com/patterns/generated-images/7edeeb25-8335-4802-b5a1-e7317fa6fa56.jpg',
+        '../../images/solutions/compteuse-trieuse.jpg',
       imageAlt:
         'Équipement professionnel de comptage et de tri de billets',
     },
@@ -78,7 +78,7 @@ export const monetiquePaiement = {
         'Solutions adaptées aux réseaux bancaires',
       ],
       image:
-        'https://cdn.magicpatterns.com/patterns/generated-images/c7b5780d-038f-4fec-95d2-47bcf273a9c3.jpg',
+        '../../images/solutions/ATM.avif',
       imageAlt:
         'Guichet automatique bancaire dans un environnement professionnel',
     },
@@ -94,7 +94,7 @@ export const monetiquePaiement = {
         'Adaptée aux professionnels et commerces',
       ],
       image:
-        'https://cdn.magicpatterns.com/patterns/generated-images/4479c851-07bd-45d4-b643-92162ef2e2e0.jpg',
+        '../../images/solutions/SoftPOS.jpg',
       imageAlt:
         'Paiement sans contact effectué avec un smartphone',
     },
