@@ -7,10 +7,10 @@ import { useRouter } from "next/navigation";
 import events from "../../../data/events/data";
 
 export default function EventRepresentation() {
-  const Router = useRouter();
+const Router = useRouter();
 
   return (
-    <section className="w-full px-2 py-8 sm:px-4 lg:px-6 mb-6">
+    <section       className="w-full px-2 py-8 sm:px-4 lg:px-6 mb-6" >
       <div className="mx-auto max-w-7xl">
         <motion.div
           className="mb-10 max-w-xl"
@@ -40,8 +40,8 @@ export default function EventRepresentation() {
               className="group overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-            //   viewport={{ once: true }}
-            //   transition={{}}
+              viewport={{ once: true }}
+              transition={{  }}
             >
               <div className="relative h-56 w-full overflow-hidden">
                 <Image
@@ -61,14 +61,14 @@ export default function EventRepresentation() {
                   {event.desc}
                 </p>
 
-                <motion.button
-                  onClick={() => Router.push(`evenements/details?id=${index}`)}
+                <button
+                 onClick={()=> Router.push(`evenements/details?id=${index}`)}
                   type="button"
-                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold bg-red-700 p-3 rounded cursor-pointer text-white transition group-hover:gap-3"
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-red-600 transition group-hover:gap-3"
                 >
                   En savoir plus
                   <ArrowRight size={17} />
-                </motion.button>
+                </button>
               </div>
             </motion.article>
           ))}
