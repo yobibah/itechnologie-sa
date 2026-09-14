@@ -11,7 +11,7 @@ import bf from "../../../public/images/global.png";
 export default function RepresentationBarnner() {
   const pays = [
     {
-      nom: "Republique de Guinée",
+      nom: "Guinnee conakry",
       type: "Siège du groupe",
       ville: "conakry",
       initial: "CI",

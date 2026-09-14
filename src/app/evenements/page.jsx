@@ -1,4 +1,15 @@
+import EvenBarrner from "../../../components/ui/evenements/event-barnner"
+import EventRepresentation from "../../../components/ui/evenements/event-representation"
+
 export default function evenements() {
-  return <div>infogerance -services-manages</div>;
+  return  (
+    <> 
+        <EvenBarrner/>
+        <EventRepresentation/>
+    </>
+
+  )
+ 
+  
 }
  
