@@ -23,9 +23,9 @@ export default function DeveloppementInformatiquePage() {
         paragraphs={solution.introParagraphs}
       />
 
-      <SolutionApproach
+      {/* <SolutionApproach
         paragraph={solution.approachParagraph}
-      />
+      /> */}
 
       <SolutionServices
         services={solution.services}

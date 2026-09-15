@@ -69,22 +69,6 @@ export const energieBatiment = {
     },
     {
       number: '04',
-      title: 'Solutions DATACENTER',
-      description:
-        'Conception et aménagement d’infrastructures Datacenter adaptées aux exigences de disponibilité, de sécurité et de continuité de vos systèmes informatiques.',
-      items: [
-        'Aménagement de salles et baies informatiques',
-        'Infrastructure réseau et brassage',
-        'Énergie secourue et onduleurs',
-        'Refroidissement et sécurité des équipements',
-      ],
-      image:
-       '../../images/solutions/dataCenter.jpg',
-      imageAlt:
-        'Salle Datacenter avec baies informatiques alignées',
-    },
-    {
-      number: '05',
       title: 'Audit énergétique',
       description:
         'Analysez les consommations et les performances énergétiques de vos installations afin d’identifier les sources de gaspillage et les opportunités d’amélioration.',

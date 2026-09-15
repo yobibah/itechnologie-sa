@@ -24,9 +24,9 @@ export default function TelecommunicationsDataPage() {
         paragraphs={solution.introParagraphs}
       />
 
-      <SolutionApproach
+      {/* <SolutionApproach
         paragraph={solution.approachParagraph}
-      />
+      /> */}
 
       <SolutionServices
         services={solution.services}

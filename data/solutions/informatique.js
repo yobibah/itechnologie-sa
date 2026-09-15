@@ -28,7 +28,7 @@ export const solutionsInformatiques = {
     'Nous intervenons par un audit de l’existant, la définition d’une architecture cible réaliste, puis un déploiement planifié pour limiter l’impact sur vos utilisateurs. Nos équipes assurent ensuite la maintenance, la supervision et l’évolution de l’infrastructure, avec des engagements de service clairs et un interlocuteur dédié.',
   ],
 
-  approachParagraph:
+   approachParagraph:
     'De l’inventaire du parc existant à la mise en production, nous pilotons chaque phase du projet : dimensionnement, acquisition du matériel, installation, migration des données et transfert de compétences vers vos équipes internes.',
 
   services: [
@@ -125,7 +125,7 @@ export const solutionsInformatiques = {
     {
       number: '04',
 
-      title: 'Solutions logicielles',
+      title: 'Développement et intégration de Solutions',
 
       description:
         'Nous intégrons et déployons les solutions logicielles professionnelles dont vos métiers ont besoin, en assurant l’interopérabilité avec votre système d’information et la formation des utilisateurs.',

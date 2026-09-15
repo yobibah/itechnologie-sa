@@ -23,9 +23,9 @@ export default function MonetiqueMoyensPaiementPage() {
         paragraphs={solution.introParagraphs}
       />
 
-      <SolutionApproach
+      {/* <SolutionApproach
         paragraph={solution.approachParagraph}
-      />
+      /> */}
 
       <SolutionServices
         services={solution.services}
