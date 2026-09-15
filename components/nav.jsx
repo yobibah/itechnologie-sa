@@ -191,33 +191,34 @@ export function Header() {
         <header className="bg-white sticky top-0 z-50 shadow-sm">
           <div className=" mx-auto px-4 sm:px-4 lg:px-16">
             <div className="h-20 flex items-center justify-between gap-2">
-              <div className="flex-shrink-0">
-                <Link
-                  href="/"
-                  className="flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 rounded-lg"
-                >
-                  <Image
-                    src="/logo.png"
-                    alt="Logo ITECHNOLOGIE SA"
-                    width={88}
-                    height={28}
-                    className="
-                      w-28
-                      sm:w-36
-                      md:w-44
-                      lg:w-48
-               
-                      max-h-10
-                      sm:max-h-12
-                      md:max-h-14
-                      lg:max-h-16
-                      object-contain
-                      rounded-md
-                    "
-                    priority
-                  />
-                </Link>
-              </div>
+
+<div className="flex-shrink-0 flex items-center">
+  <Link
+    href="/"
+    className="flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 rounded-lg"
+  >
+    <Image
+      src="/logo.jpeg"
+      alt="Logo ITECHNOLOGIE SA"
+      width={180}
+      height={50}
+      className="
+        w-28
+        sm:w-36
+        md:w-40
+        lg:w-44
+        h-auto
+        max-h-20
+        object-contain
+
+
+      "
+      priority
+    />
+  </Link>
+</div>
+
+
 
               <nav className="hidden xl:flex items-center justify-center flex-1 min-w-0 gap-0.5">
                 {navLinks.map((link) => {

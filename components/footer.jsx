@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUp } from "lucide-react";
+import { ArrowBigRight, ArrowUp, Play, StepForward } from "lucide-react";
 import { motion } from "framer-motion";
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,7 +16,7 @@ export function Footer() {
 
   const bottomLinks = [
     { name: "Qui sommes-nous ?", path: "/about" },
-    { name: "Nos solutions", path: "/solutions" },
+    { name: "Nos References", path: "/references" },
     { name: "Nos événements", path: "/evenements" },
     { name: "Nos partenaires", path: "/partenaires" },
     { name: "Contacts", path: "/contact" },
@@ -24,31 +24,29 @@ export function Footer() {
 
   return (
     <footer className="relative bg-black text-white">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-14">
-          <h2 className="text-2xl sm:text-3xl font-light text-white max-w-xl">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-5">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-end gap-8 mb-5">
+          {/* <h2 className="text-2xl sm:text-3xl font-light text-white max-w-xl">
             ITECHNOLOGIE, votre partenaire{" "}
             <span className="font-semibold">technologique de confiance</span>
-          </h2>
+          </h2> */}
 
           <Image
-            src="/logo.png"
+            src="/logo.jpeg"
             alt="Logo ITECHNOLOGIE SA"
             width={160}
-            height={50}
-            className="w-36 sm:w-40 h-auto object-contain rounded-md p-1.5 shrink-0"
+            height={100}
+            className="w-36 sm:w-50 h-auto object-contain rounded-md p-1.5 shrink-0"
           />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-10">
           <div>
             <h3 className="text-sm font-bold uppercase tracking-wider mb-3 text-white">
               ITECHNOLOGIE - Siège
             </h3>
 
-            <p className="text-red-200 text-sm leading-relaxed">
-              Ouagadougou, Burkina Faso
-            </p>
+            <p className="text-sm leading-relaxed">Ouagadougou, Burkina Faso</p>
           </div>
 
           <div>
@@ -56,7 +54,7 @@ export function Footer() {
               Nos solutions
             </h3>
 
-            <p className="text-red-200 text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed">
               Informatique - Réseaux &amp; Cybersécurité - Énergie &amp;
               Bâtiment
               <br />
@@ -66,12 +64,31 @@ export function Footer() {
 
           <div>
             <h3 className="text-sm font-bold uppercase tracking-wider mb-3 text-white">
+              Liens rapides
+            </h3>
+            <nav
+              className="grid grid-cols-1 "
+              aria-label="Navigation du pied de page"
+            >
+              {bottomLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  href={link.path}
+                  className=" hover:text-red-700 md:text-sm flex  gap-1.5 transition-colors py-1.5"
+                >
+                  {/* <StepForward size={16} color="#9f0712"/> */}
+                  {link.name}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-wider mb-3 text-white">
               Horaires
             </h3>
 
-            <p className="text-red-200 text-sm leading-relaxed">
-              Lun - Ven : 08h00 - 17h30
-            </p>
+            <p className="text-sm leading-relaxed">Lun - Ven : 08h00 - 17h00</p>
           </div>
 
           <div className="lg:text-right">
@@ -81,7 +98,7 @@ export function Footer() {
 
             <a
               href="mailto:info@itechnologiesa.com"
-              className="text-red-200 text-sm hover:text-white transition-colors"
+              className="text-sm hover:text-red-700 transition-colors"
             >
               info@itechnologiesa.com
             </a>
@@ -90,7 +107,7 @@ export function Footer() {
 
             <a
               href="tel:+22668080202"
-              className="text-red-200 text-sm leading-relaxed hover:text-white transition-colors"
+              className="text-sm leading-relaxed hover:text-red-700 transition-colors"
             >
               +226 68 08 02 02
             </a>
@@ -98,11 +115,9 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-red-900" />
-
       <div className="mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <nav
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+          {/* <nav
             className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2"
             aria-label="Navigation du pied de page"
           >
@@ -110,16 +125,17 @@ export function Footer() {
               <Link
                 key={link.path}
                 href={link.path}
-                className="text-red-200 hover:text-white text-sm transition-colors"
+                className="hover:text-white text-sm transition-colors"
               >
                 {link.name}
               </Link>
             ))}
-          </nav>
+          </nav> */}
 
           <div className="flex justify-center items-center gap-10">
-            <p className="text-red-300 text-sm whitespace-nowrap">
-              © {currentYear} ITECHNOLOGIE SA
+            <p className="text-md whitespace-nowrap">
+              © {currentYear} <strong className="text-red-700">i</strong>
+              TECHNOLOGIE SA
             </p>
 
             <motion.button
@@ -134,26 +150,25 @@ export function Footer() {
               aria-label="Retour en haut"
               title="Retour en haut"
               className="
-        shrink-0
-        
-   
-          right-6
-        
-          sm:right-8
-          w-11
-          h-11
-          flex
-          items-center
-          justify-center
-          bg-red-900/50
-          hover:bg-red-500
-          text-white
-          rounded-full
-          shadow-lg
-          transition-colors
-          focus-visible:outline-none
-          focus-visible:ring-2
-          focus-visible:ring-red-300
+                  shrink-0
+                  absolute
+                  right-6
+                  sm:right-8
+                  w-11
+                  h-11
+                  flex
+                  items-center
+                  justify-center
+                bg-red-900/50
+                hover:bg-red-500
+                text-white
+                rounded-full
+                shadow-lg
+                transition-colors
+                focus-visible:outline-none
+                focus-visible:ring-2
+                cursor-pointer
+              Wfocus-visible:ring-red-300
         "
             >
               <ArrowUp size={20} />
