@@ -24,7 +24,7 @@ export default function ContactHero() {
                 />
 
                 <div
-                    className="absolute inset-0 bg-[#0B1A38]/20"
+                    className="absolute inset-0 bg-black/20"
                     aria-hidden="true"
                 />
 

@@ -4,7 +4,15 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-import { Menu, X, PhoneCall, Mail, ChevronDown, Flag } from "lucide-react";
+import {
+  Menu,
+  X,
+  PhoneCall,
+  Mail,
+  ChevronDown,
+  Flag,
+} from "lucide-react";
+
 import { SocialIcon } from "react-social-icons";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -21,19 +29,31 @@ export function Header() {
   }, [pathname]);
 
   const navLinks = [
-    { name: "ACCUEIL", path: "/" },
+    {
+      name: "ACCUEIL",
+      path: "/",
+    },
+
     {
       name: "NOUS DÉCOUVRIR",
-      path: "/about",
       children: [
-        { name: "À propos de nous", path: "/about" },
-        { name: "Mots du DG", path: "/about/mots-du-DG" },
-        { name: "Notre équipe", path: "/about/equipe" },
+        {
+          name: "À propos de nous",
+          path: "/about",
+        },
+        {
+          name: "Mots du DG",
+          path: "/about/mots-du-DG",
+        },
+        {
+          name: "Notre équipe",
+          path: "/about/equipe",
+        },
       ],
     },
+
     {
       name: "NOS SOLUTIONS",
-      path: "/solutions",
       children: [
         {
           name: "Solutions Informatiques",
@@ -65,18 +85,42 @@ export function Header() {
         },
       ],
     },
+
     {
       name: "NOS PARTENAIRES",
       path: "/partenaires",
     },
-    { name: "NOS EVENEMENTS", path: "/evenements" },
-    { name: "NOS REFERENCES", path: "/references" },
-    { name: "NOUS CONTACTER", path: "/contact" },
+
+    {
+      name: "NOS EVENEMENTS",
+      path: "/evenements",
+    },
+
+    {
+      name: "NOS REFERENCES",
+      path: "/references",
+    },
+
+    {
+      name: "NOUS CONTACTER",
+      path: "/contact",
+    },
   ];
 
   const isActive = (path) => {
-    if (path === "/") return pathname === "/";
+    if (!path) return false;
+
+    if (path === "/") {
+      return pathname === "/";
+    }
+
     return pathname.startsWith(path);
+  };
+
+  const isParentActive = (children) => {
+    if (!children) return false;
+
+    return children.some((child) => isActive(child.path));
   };
 
   const contact = [
@@ -91,25 +135,31 @@ export function Header() {
       email: "info@itechnologiesa.com",
     },
   ];
+
   const [curentIndex, setCurrentIndex] = useState(0);
   const [items, setItems] = useState({});
+
   useEffect(() => {
     setItems(contact[curentIndex]);
+
     const timer = setTimeout(() => {
-      setCurrentIndex((prev) => (prev + 1) % contact.length);
+      setCurrentIndex(
+        (prev) => (prev + 1) % contact.length
+      );
     }, 3000);
 
     return () => clearTimeout(timer);
   }, [curentIndex]);
 
-  // console.log('items',items)
-
   return (
     <>
-      <div className="w-full ">
+      <div className="w-full">
+
+        {/* TOP BAR */}
         <div className="w-full bg-red-950">
-          <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8">
             <div className="h-10 flex items-center justify-between">
+
               <AnimatePresence mode="wait">
                 <motion.div
                   key={`${items.pays}-${items.telephone}`}
@@ -122,14 +172,20 @@ export function Header() {
                   }}
                   className="hidden md:flex items-center gap-4 text-white text-sm"
                 >
+
                   <motion.div
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.05 }}
+                    transition={{
+                      duration: 0.4,
+                      delay: 0.05,
+                    }}
                     className="flex items-center gap-2"
                   >
                     <Flag size={14} />
-                    <span className="font-medium">{items.pays}</span>
+                    <span className="font-medium">
+                      {items.pays}
+                    </span>
                   </motion.div>
 
                   <span className="text-red-300">|</span>
@@ -137,12 +193,20 @@ export function Header() {
                   <motion.div
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.1 }}
+                    transition={{
+                      duration: 0.4,
+                      delay: 0.1,
+                    }}
                     className="flex items-center gap-2"
                   >
                     <PhoneCall size={14} />
-                    <a      href={`tel:${items.telephone}`} 
-                    className="font-medium">{items.telephone}</a>
+
+                    <a
+                      href={`tel:${items.telephone}`}
+                      className="font-medium"
+                    >
+                      {items.telephone}
+                    </a>
                   </motion.div>
 
                   <span className="text-red-300">|</span>
@@ -150,10 +214,14 @@ export function Header() {
                   <motion.div
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.15 }}
+                    transition={{
+                      duration: 0.4,
+                      delay: 0.15,
+                    }}
                     className="flex items-center gap-2"
                   >
                     <Mail size={14} />
+
                     <a
                       href="mailto:info@itechnologiesa.com"
                       className="font-medium"
@@ -161,72 +229,111 @@ export function Header() {
                       {items.email}
                     </a>
                   </motion.div>
+
                 </motion.div>
               </AnimatePresence>
 
+              {/* SOCIAL */}
               <div className="hidden md:flex items-center gap-2 ml-auto md:ml-0">
+
                 <SocialIcon
                   url="https://www.whatsapp.com"
                   bgColor="white"
                   fgColor="#162456"
-                  style={{ width: 24, height: 24 }}
+                  style={{
+                    width: 24,
+                    height: 24,
+                  }}
                 />
+
                 <SocialIcon
                   url="https://www.linkedin.com"
                   bgColor="white"
                   fgColor="#162456"
-                  style={{ width: 24, height: 24 }}
+                  style={{
+                    width: 24,
+                    height: 24,
+                  }}
                 />
+
                 <SocialIcon
                   url="https://www.facebook.com"
                   bgColor="white"
                   fgColor="#162456"
-                  style={{ width: 24, height: 24 }}
+                  style={{
+                    width: 24,
+                    height: 24,
+                  }}
                 />
+
               </div>
+
             </div>
           </div>
         </div>
 
+        {/* HEADER */}
         <header className="bg-white sticky top-0 z-50 shadow-sm">
-          <div className=" mx-auto px-4 sm:px-4 lg:px-16">
+
+          <div className="mx-auto px-4 sm:px-4 lg:px-16">
+
             <div className="h-20 flex items-center justify-between gap-2">
-              <div className="flex-shrink-0">
+
+              {/* LOGO */}
+              <div className="flex-shrink-0 flex items-center">
+
                 <Link
                   href="/"
-                  className="flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 rounded-lg"
+                  className="
+                    flex items-center
+                    focus-visible:outline-none
+                    focus-visible:ring-2
+                    focus-visible:ring-red-600
+                    rounded-lg
+                  "
                 >
+
                   <Image
-                    src="/logo.png"
+                    src="/logo.jpeg"
                     alt="Logo ITECHNOLOGIE SA"
-                    width={88}
-                    height={28}
+                    width={180}
+                    height={50}
                     className="
                       w-28
                       sm:w-36
-                      md:w-44
-                      lg:w-48
-               
-                      max-h-10
-                      sm:max-h-12
-                      md:max-h-14
-                      lg:max-h-16
+                      md:w-40
+                      lg:w-44
+                      h-auto
+                      max-h-20
                       object-contain
-                      rounded-md
                     "
                     priority
                   />
+
                 </Link>
+
               </div>
 
+              {/* DESKTOP NAVIGATION */}
               <nav className="hidden xl:flex items-center justify-center flex-1 min-w-0 gap-0.5">
-                {navLinks.map((link) => {
-                  const active = isActive(link.path);
 
+                {navLinks.map((link) => {
+
+                  const active = link.children
+                    ? isParentActive(link.children)
+                    : isActive(link.path);
+
+                  {/* MENU AVEC ENFANTS */}
                   if (link.children) {
                     return (
-                      <div key={link.name} className="relative group shrink-0">
+                      <div
+                        key={link.name}
+                        className="relative group shrink-0"
+                      >
+
+                        {/* PARENT = BOUTON, PAS DE LINK */}
                         <button
+                          type="button"
                           className={`
                             flex items-center gap-1
                             px-2.5 py-2.5
@@ -247,13 +354,22 @@ export function Header() {
                             }
                           `}
                         >
+
                           {link.name}
+
                           <ChevronDown
                             size={14}
-                            className="transition-transform duration-200 group-hover:rotate-180 shrink-0"
+                            className="
+                              transition-transform
+                              duration-200
+                              group-hover:rotate-180
+                              shrink-0
+                            "
                           />
+
                         </button>
 
+                        {/* SOUS-MENU */}
                         <div
                           className="
                             absolute
@@ -271,8 +387,21 @@ export function Header() {
                             z-50
                           "
                         >
-                          <div className="w-64 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden">
+
+                          <div
+                            className="
+                              w-64
+                              bg-white
+                              rounded-xl
+                              shadow-xl
+                              border
+                              border-gray-100
+                              overflow-hidden
+                            "
+                          >
+
                             {link.children.map((child) => (
+
                               <Link
                                 key={child.path}
                                 href={child.path}
@@ -292,13 +421,18 @@ export function Header() {
                               >
                                 {child.name}
                               </Link>
+
                             ))}
+
                           </div>
+
                         </div>
+
                       </div>
                     );
                   }
 
+                  {/* LIEN NORMAL */}
                   return (
                     <Link
                       key={link.name}
@@ -325,18 +459,39 @@ export function Header() {
                         }
                       `}
                     >
+
                       {link.name}
+
                       {active && (
-                        <span className="absolute left-3 right-3 -bottom-px h-0.5 bg-red-600 rounded-full" />
+                        <span
+                          className="
+                            absolute
+                            left-3
+                            right-3
+                            -bottom-px
+                            h-0.5
+                            bg-red-600
+                            rounded-full
+                          "
+                        />
                       )}
+
                     </Link>
                   );
                 })}
+
               </nav>
 
+              {/* MOBILE BUTTON */}
               <div className="flex-shrink-0 xl:hidden">
+
                 <button
-                  onClick={() => setIsMobileMenuOpen((value) => !value)}
+                  type="button"
+                  onClick={() =>
+                    setIsMobileMenuOpen(
+                      (value) => !value
+                    )
+                  }
                   className="
                     p-2.5
                     rounded-lg
@@ -352,34 +507,200 @@ export function Header() {
                   aria-label="Menu"
                   aria-expanded={isMobileMenuOpen}
                 >
-                  {isMobileMenuOpen ? <X size={27} /> : <Menu size={27} />}
+
+                  {isMobileMenuOpen ? (
+                    <X size={27} />
+                  ) : (
+                    <Menu size={27} />
+                  )}
+
                 </button>
+
               </div>
+
             </div>
+
           </div>
 
+          {/* MOBILE MENU */}
           <AnimatePresence>
+
             {isMobileMenuOpen && (
+
               <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.25 }}
-                className="xl:hidden bg-white border-t border-gray-100 overflow-hidden shadow-lg"
+                initial={{
+                  height: 0,
+                  opacity: 0,
+                }}
+                animate={{
+                  height: "auto",
+                  opacity: 1,
+                }}
+                exit={{
+                  height: 0,
+                  opacity: 0,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+                className="
+                  xl:hidden
+                  bg-white
+                  border-t
+                  border-gray-100
+                  overflow-hidden
+                  shadow-lg
+                "
               >
+
                 <div className="px-4 py-4 space-y-1">
+
                   {navLinks.map((link) => {
-                    const active = isActive(link.path);
-                    const isOpen = openMobileSubmenu === link.name;
+
+                    const active = link.children
+                      ? isParentActive(link.children)
+                      : isActive(link.path);
+
+                    const isOpen =
+                      openMobileSubmenu === link.name;
 
                     return (
                       <div key={link.name}>
-                        <div className="flex items-center">
+
+                        {/* PARENT AVEC CHILDREN */}
+                        {link.children ? (
+
+                          <div>
+
+                            <button
+                              type="button"
+                              onClick={() =>
+                                setOpenMobileSubmenu(
+                                  isOpen
+                                    ? null
+                                    : link.name
+                                )
+                              }
+                              aria-expanded={isOpen}
+                              className={`
+                                w-full
+                                flex
+                                items-center
+                                justify-between
+                                px-4
+                                py-3
+                                rounded-lg
+                                text-[13px]
+                                font-semibold
+                                text-left
+                                focus-visible:outline-none
+                                focus-visible:ring-2
+                                focus-visible:ring-red-600
+                                ${
+                                  active
+                                    ? "text-red-700 bg-red-50"
+                                    : "text-gray-800 hover:bg-gray-50"
+                                }
+                              `}
+                            >
+
+                              <span>
+                                {link.name}
+                              </span>
+
+                              <ChevronDown
+                                size={16}
+                                className={`
+                                  transition-transform
+                                  duration-200
+                                  ${
+                                    isOpen
+                                      ? "rotate-180"
+                                      : ""
+                                  }
+                                `}
+                              />
+
+                            </button>
+
+                            {/* CHILDREN */}
+                            <AnimatePresence>
+
+                              {isOpen && (
+
+                                <motion.div
+                                  initial={{
+                                    height: 0,
+                                    opacity: 0,
+                                  }}
+                                  animate={{
+                                    height: "auto",
+                                    opacity: 1,
+                                  }}
+                                  exit={{
+                                    height: 0,
+                                    opacity: 0,
+                                  }}
+                                  transition={{
+                                    duration: 0.2,
+                                  }}
+                                  className="
+                                    ml-4
+                                    mt-1
+                                    overflow-hidden
+                                  "
+                                >
+
+                                  {link.children.map(
+                                    (child) => (
+
+                                      <Link
+                                        key={child.path}
+                                        href={child.path}
+                                        onClick={() =>
+                                          setIsMobileMenuOpen(
+                                            false
+                                          )
+                                        }
+                                        className="
+                                          block
+                                          px-4
+                                          py-2.5
+                                          rounded-lg
+                                          text-[13px]
+                                          text-gray-600
+                                          font-semibold
+                                          hover:text-red-600
+                                          hover:bg-gray-50
+                                          focus-visible:outline-none
+                                          focus-visible:bg-gray-50
+                                        "
+                                      >
+                                        {child.name}
+                                      </Link>
+
+                                    )
+                                  )}
+
+                                </motion.div>
+
+                              )}
+
+                            </AnimatePresence>
+
+                          </div>
+
+                        ) : (
+
+                          /* LIEN NORMAL */
                           <Link
                             href={link.path}
-                            onClick={() => setIsMobileMenuOpen(false)}
+                            onClick={() =>
+                              setIsMobileMenuOpen(false)
+                            }
                             className={`
-                              flex-1
+                              block
+                              w-full
                               px-4
                               py-3
                               rounded-lg
@@ -398,69 +719,22 @@ export function Header() {
                             {link.name}
                           </Link>
 
-                          {link.children && (
-                            <button
-                              onClick={() =>
-                                setOpenMobileSubmenu(isOpen ? null : link.name)
-                              }
-                              aria-label={`${
-                                isOpen ? "Fermer" : "Ouvrir"
-                              } le sous-menu ${link.name}`}
-                              aria-expanded={isOpen}
-                              className="
-                                p-3
-                                text-gray-500
-                                focus-visible:outline-none
-                                focus-visible:ring-2
-                                focus-visible:ring-red-600
-                                rounded-lg
-                              "
-                            >
-                              <ChevronDown
-                                size={16}
-                                className={`
-                                  transition-transform
-                                  duration-200
-                                  ${isOpen ? "rotate-180" : ""}
-                                `}
-                              />
-                            </button>
-                          )}
-                        </div>
-
-                        {link.children && isOpen && (
-                          <div className="ml-4 mt-1">
-                            {link.children.map((child) => (
-                              <Link
-                                key={child.path}
-                                href={child.path}
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="
-                                  block
-                                  px-4
-                                  py-2.5
-                                  text-[13px]
-                                  text-gray-600
-                                  font-semibold
-                                  hover:text-red-600
-                                  hover:bg-gray-50
-                                  focus-visible:outline-none
-                                  focus-visible:bg-gray-50
-                                "
-                              >
-                                {child.name}
-                              </Link>
-                            ))}
-                          </div>
                         )}
+
                       </div>
                     );
                   })}
+
                 </div>
+
               </motion.div>
+
             )}
+
           </AnimatePresence>
+
         </header>
+
       </div>
     </>
   );

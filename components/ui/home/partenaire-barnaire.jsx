@@ -30,7 +30,7 @@ export default function PartenairesBanner() {
     { name: "F5", photo: f5 },
     { name: "Veeam", photo: ven },
     { name: "Lenovo", photo: leno },
-    { name: "Life Is On", photo: lifes },
+    // { name: "Life Is On", photo: lifes },
     { name: "APC", photo: apc },
     { name: "Hikvision", photo: hikvi },
     { name: "Hewlett Packard", photo: hikbusiness },

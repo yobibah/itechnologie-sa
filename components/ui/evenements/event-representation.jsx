@@ -64,7 +64,7 @@ const Router = useRouter();
                 <button
                  onClick={()=> Router.push(`evenements/details?id=${index}`)}
                   type="button"
-                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-red-600 transition group-hover:gap-3"
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold bg-red-600 text-white p-2   transition group-hover:gap-3 hover:bg-red-700"
                 >
                   En savoir plus
                   <ArrowRight size={17} />
