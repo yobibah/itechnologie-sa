@@ -58,7 +58,7 @@ export function Header() {
       children: [
         {
           name: "Developpement & Integration",
-          path: "/solutions/developpement-integrations",
+          path: "/solutions/developpement-integration",
         },
         {
           name: "Réseau & cybersécurité",
