@@ -9,7 +9,7 @@ export default function Us() {
     const router = useRouter();
   return (
     <motion.section
-      className="w-full px-2 py-8 sm:px-4 lg:px-6 mb-6"
+      className="w-full px-3 py-4 sm:px-4 lg:px-6 mb-6"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}

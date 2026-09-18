@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-import word from "../../../../public/images/about/pdg.avif";
+import word from "../../../../public/images/about/dg.png";
 
 export default function Word() {
   const domains = [
@@ -18,7 +18,7 @@ export default function Word() {
 
   return (
     <motion.section
-      className="w-full mb-6"
+  className="w-full px-3 py-4 sm:px-4 sm:py-14 lg:px-6 mb-6"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
@@ -27,28 +27,33 @@ export default function Word() {
       }}
     >
       <div className="grid grid-cols-1 lg:grid-cols-2">
-
-        {/* Image — large, fixée à gauche */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{
-            duration: 0.6,
-            delay: 0.2,
-            ease: "easeOut",
-          }}
-          className="relative w-full h-[350px] md:h-[500px] lg:h-screen lg:sticky lg:top-0 overflow-hidden"
-        >
-          <Image
-            src={word}
-            alt="Itechnologie SA"
-            fill
-            priority
-            className="object-cover object-center"
-          />
-        </motion.div>
-
-        {/* Message — défile indépendamment à droite */}
+        
+  <motion.div
+  initial={{ opacity: 0, x: -30 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{
+    duration: 0.6,
+    delay: 0.2,
+    ease: "easeOut",
+  }}
+  className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-screen lg:sticky lg:top-0 overflow-hidden"
+>
+  <Image
+    src={word}
+    alt="Itechnologie SA"
+    fill
+    priority
+    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+    className="
+      object-contain
+      object-center
+      sm:object-contain
+      lg:object-cover
+      lg:object-center
+    "
+  />
+</motion.div>
+    
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -59,7 +64,7 @@ export default function Word() {
           }}
           className="flex flex-col px-4 sm:px-6 lg:px-10 py-10 lg:h-screen lg:overflow-y-auto"
         >
-          {/* En-tête */}
+   
           <div className="mb-8">
             <span className="text-sm font-semibold uppercase tracking-[0.2em] text-red-900">
               Le mot de la Direction
@@ -72,7 +77,7 @@ export default function Word() {
             <div className="w-16 h-1 bg-red-900 rounded-full mt-5" />
           </div>
 
-          {/* Section 01 — Notre parcours */}
+     
           <div className="mb-8">
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Notre parcours
@@ -125,7 +130,6 @@ export default function Word() {
             </div>
           </div>
 
-          {/* Section 03 — Notre engagement */}
           <div className="mb-8">
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Notre engagement

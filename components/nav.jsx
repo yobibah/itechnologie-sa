@@ -56,8 +56,8 @@ export function Header() {
       name: "NOS SOLUTIONS",
       children: [
         {
-          name: "Solutions Informatiques",
-          path: "/solutions/developpement-informatique",
+          name: "Developpement & Integration",
+          path: "/solutions/developpement-integration",
         },
         {
           name: "Réseau & cybersécurité",
@@ -237,7 +237,7 @@ export function Header() {
               <div className="hidden md:flex items-center gap-2 ml-auto md:ml-0">
 
                 <SocialIcon
-                  url="https://www.whatsapp.com"
+                  url="https://api.whatsapp.com/send/?phone=22670763637&text&type=phone_number&app_absent=0"
                   bgColor="white"
                   fgColor="#162456"
                   style={{
@@ -247,7 +247,7 @@ export function Header() {
                 />
 
                 <SocialIcon
-                  url="https://www.linkedin.com"
+                  url="https://www.linkedin.com/company/itechnologie-sa/"
                   bgColor="white"
                   fgColor="#162456"
                   style={{
@@ -257,7 +257,7 @@ export function Header() {
                 />
 
                 <SocialIcon
-                  url="https://www.facebook.com"
+                  url="https://web.facebook.com/profile.php?id=61592744157536"
                   bgColor="white"
                   fgColor="#162456"
                   style={{
