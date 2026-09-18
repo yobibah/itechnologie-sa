@@ -1,9 +1,9 @@
 export const solutionsInformatiques = {
-  slug: 'solutions-informatiques',
+  slug: 'developpement-integration',
 
-  navLabel: 'Solutions Informatiques',
+  navLabel: 'developpement integration',
 
-  title: 'Solutions Informatiques',
+  title: 'developpement integration',
 
   heroTagline:
     'Des solutions informatiques fiables et adaptées aux enjeux de votre organisation.',
@@ -15,7 +15,7 @@ export const solutionsInformatiques = {
   heroImageAlt:
     'Deux ingénieurs iTechnologie intervenant sur une baie de serveurs en salle technique',
 
-  introLabel: 'Solutions informatiques',
+  introLabel: 'developpement integration',
 
   introTitle:
     'Des technologies au service de votre performance',

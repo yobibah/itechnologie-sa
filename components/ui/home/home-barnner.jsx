@@ -22,7 +22,7 @@ export default function HomeBanner() {
         "Des solutions serveurs fiables et performantes pour accompagner votre entreprise.",
       type: "serveur",
       image: serv,
-      path: "/solutions/developpement-informatique",
+      path: "/solutions/developpement-integration",
     },
     {
       name: "Développement logiciel",
@@ -30,7 +30,7 @@ export default function HomeBanner() {
         "Conception d'applications web et mobiles adaptées à vos besoins.",
       type: "dev",
       image: dev,
-      path: "/solutions/developpement-informatique",
+      path: "/solutions/developpement-integration",
     },
     {
       name: "Cybersécurité",

@@ -19,7 +19,6 @@ export default function RepresentationBarnner() {
       type: "Siège du groupe",
       ville: "conakry",
       initial: "CI",
-      depuis: "2008",
       tel: "(+224) 620-92-48-33 ",
       adresse: "Kaloum-Almamya I, Conakry, République de Guinée",
       image: gn,
@@ -30,8 +29,6 @@ export default function RepresentationBarnner() {
       type: "Antenne technique",
       ville: "Ouagadougou",
       initial: "BF",
-      depuis: "2019",
-
       tel: "+226 68 08 02 02",
       adresse: "Ouaga 2000, Avenue Mouammar Kadhafi — Ouagadougou",
       image: bfa,
@@ -41,7 +38,6 @@ export default function RepresentationBarnner() {
       type: "Antenne technique",
       ville: "Libreville",
       initial: "GB",
-      depuis: "2021",
       tel: "—",
       adresse: "Libreville",
       image: gb,
@@ -51,7 +47,6 @@ export default function RepresentationBarnner() {
       type: "Antenne technique",
       ville: "Lomé",
       initial: "TG",
-      depuis: "2020",
       tel: "—",
       adresse: "Lomé",
       image: tg,
@@ -61,7 +56,6 @@ export default function RepresentationBarnner() {
       type: "Antenne technique",
       ville: "Bamako",
       initial: "ML",
-      depuis: "2022",
       tel: "—",
       adresse: "Bamako",
       image: ml,
@@ -71,7 +65,6 @@ export default function RepresentationBarnner() {
       type: "Antenne technique",
       ville: "Dakar",
       initial: "SN",
-      depuis: "2020",
       tel: "—",
       adresse: "Dakar",
       image: sn,
@@ -172,7 +165,7 @@ export default function RepresentationBarnner() {
             className="lg:col-span-5 border border-gray-200 rounded-2xl p-6 bg-white"
           >
             <p className="text-sm font-semibold text-red-700 mb-2">
-              {selected.type} — depuis {selected.depuis}
+              {selected.type}
             </p>
 
             <h2 className="text-2xl sm:text-3xl font-black text-gray-900 mb-4">

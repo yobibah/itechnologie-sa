@@ -178,7 +178,7 @@ export default function ContactSection() {
               />
             </div>
 
-            <div className="bg-black px-6 py-6 md:px-8">
+            <div className="bg-zinc-700 px-6 py-6 md:px-8">
               <div className="flex items-start gap-4">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-[#E10600]">
                   <MapPin
@@ -386,7 +386,8 @@ export default function ContactSection() {
                   </p>
 
                   <p className="mt-1 text-[13px] text-[#33405C]">
-                    +226 79 05 02 02
+                    +226 68 08 02 02
+
                   </p>
                 </div>
               </div>

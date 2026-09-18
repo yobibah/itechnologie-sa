@@ -17,7 +17,7 @@ export default function SolutionBarner() {
   const solutions = [
     {
       name: "Solutions Informatiques",
-      path: "/solutions/developpement-informatique",
+      path: "/solutions/developpement-integration",
       image: dev,
     },
     {

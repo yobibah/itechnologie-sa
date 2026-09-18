@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function ReferencesHero() {
   return (
     // Conteneur principal blanc pour créer la marge d'environ 1cm (p-2 à p-3)
-    <div className="w-full bg-white p-2 md:p-3">
+    <div className="w-full bg-white p-2 md:p-3 mt-10">
       <section className="relative h-[280px] md:h-[360px] flex items-center overflow-hidden rounded-2xl">
         {/* Image statique avec coins arrondis */}
         <div className="absolute inset-0 z-0">
