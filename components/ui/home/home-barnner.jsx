@@ -358,12 +358,13 @@ export default function HomeBanner() {
             duration: 0.5,
           }}
           className="
+          
             absolute
             bottom-8
             left-8
             z-20
-          
-            flex
+            hidden
+            sm:flex
             gap-2
           "
         >

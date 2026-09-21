@@ -9,7 +9,7 @@ import cisco from "../../../public/images/cisco.png";
 import dell from "../../../public/images/dell.jpg";
 import diabold from "../../../public/images/diabold.png";
 import f5 from "../../../public/images/f5.png";
-import hikbusiness from "../../../public/images/hikbusiness.jpeg";
+import hikbusiness from "../../../public/images/HP-Partner-Logo.webp";
 import hikvi from "../../../public/images/hikvision.jpeg";
 import hua from "../../../public/images/huawei.jpeg";
 import gona from "../../../public/images/iagona.webp";
