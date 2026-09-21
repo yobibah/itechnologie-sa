@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function PartnersHero() {
   return (
-    <div className="w-full bg-white p-2 md:p-3">
+    <div className="mt-11 w-full bg-white p-2 md:p-3">
       {/* On retire justify-center ici */}
       <section className="relative h-[280px] md:h-[360px] flex items-center overflow-hidden rounded-2xl">
         

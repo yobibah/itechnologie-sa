@@ -24,9 +24,7 @@ export default function EnergieTechnologieBatimentPage() {
         paragraphs={solution.introParagraphs}
       />
 
-      <SolutionApproach
-        paragraph={solution.approachParagraph}
-      />
+  
 
       <SolutionServices
         services={solution.services}

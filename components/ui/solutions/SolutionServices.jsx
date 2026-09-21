@@ -13,7 +13,7 @@ export default function SolutionServices({ services }) {
 
   return (
     <section className="bg-[#F4F6F9]">
-      <div className="mx-auto max-w-shell px-6 py-5 md:py-7 lg:py-9">
+      <div className="mx-auto max-w-shell px-6 py-0 md:py-2 lg:py-3">
         <motion.div
           initial={{ opacity: 0, y: 28, scale: 0.985 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}

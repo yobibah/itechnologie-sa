@@ -9,7 +9,7 @@ export default function SolutionApproach({ paragraph }) {
     <section className="relative overflow-hidden bg-[#F4F6F9]">
       <div className="absolute right-0 top-0 hidden h-full w-1/3 bg-white/30 lg:block" />
 
-      <div className="relative mx-auto max-w-shell px-6 py-5 md:py-8 lg:py-10">
+      <div className="relative mx-auto max-w-shell px-6 py-2 md:py-5 lg:py-10">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-16">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
