@@ -150,7 +150,7 @@ export default function ContactSection() {
             Parlons de votre projet
           </p>
 
-          <h2 className="mt-5 text-[30px] font-semibold leading-[1.15] tracking-tight text-[#0B1A38] md:text-[38px]">
+          <h2 className="mt-5 text-[30px] font-semibold leading-[1.15] tracking-tight  md:text-[38px]">
             Nous sommes à votre écoute
           </h2>
 
@@ -159,7 +159,7 @@ export default function ContactSection() {
             aria-hidden="true"
           />
 
-          <p className="mt-6 text-[16px] leading-[1.8] text-[#6E7A93]">
+          <p className="mt-6 text-[16px] leading-[1.8] text-gray-500">
             Une question, un projet ou un besoin d’accompagnement ?
             Contactez notre équipe et échangeons sur vos besoins.
           </p>
@@ -178,7 +178,7 @@ export default function ContactSection() {
               />
             </div>
 
-            <div className="bg-[#0B1A38] px-6 py-6 md:px-8">
+            <div className="bg-zinc-700 px-6 py-6 md:px-8">
               <div className="flex items-start gap-4">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-[#E10600]">
                   <MapPin
@@ -341,7 +341,7 @@ export default function ContactSection() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="group inline-flex h-12 items-center justify-center gap-3 bg-[#E10600] px-7 text-[13px] font-semibold text-white transition-colors duration-150 hover:bg-[#0B1A38] disabled:cursor-not-allowed disabled:opacity-60"
+                className="group inline-flex h-12 items-center justify-center gap-3 bg-red-600 px-7 text-[13px] font-semibold text-white transition-colors duration-150 hover:bg-red-800 disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {isSubmitting
                   ? 'Envoi en cours...'
@@ -386,7 +386,8 @@ export default function ContactSection() {
                   </p>
 
                   <p className="mt-1 text-[13px] text-[#33405C]">
-                    +226 79 05 02 02
+                    +226 68 08 02 02
+
                   </p>
                 </div>
               </div>

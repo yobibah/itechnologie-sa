@@ -45,7 +45,7 @@ export default function UsBanner() {
 
           <p className="mt-5 text-base sm:text-lg leading-relaxed text-gray-600">
             iTechnologie SA est une entreprise spécialisée dans les solutions
-            informatiques et la transformation numérique au Burkina Faso.
+            informatiques et la transformation numérique en Afrique.
           </p>
 
           <p className="mt-4 text-base sm:text-lg leading-relaxed text-gray-600">

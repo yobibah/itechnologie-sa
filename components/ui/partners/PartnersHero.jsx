@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 
 export default function PartnersHero() {
   return (
-    <div className="mt-11 w-full bg-white p-2 md:p-3">
+    <div className="w-full bg-white p-2 md:p-3 mt-10">
       {/* On retire justify-center ici */}
       <section className="relative h-[280px] md:h-[360px] flex items-center overflow-hidden rounded-2xl">
         
         {/* Image statique */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 ">
           <Image
             src="/imagep/heropartner.png"
             alt="Nos partenaires"
