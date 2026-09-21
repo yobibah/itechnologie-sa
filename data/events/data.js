@@ -18,10 +18,10 @@ import res from '../../public/images/events/reseaux.jpg';
       desc: "Découvrez nos formations pratiques en administration et gestion des réseaux informatiques.",
       image: res,
     },
-       {
-      name: "FORMATION EN RÉSEAUX",
-      desc: "Découvrez nos formations pratiques en administration et gestion des réseaux informatiques.",
-      image: res,
-    },
+    //    {
+    //   name: "FORMATION EN RÉSEAUX",
+    //   desc: "Découvrez nos formations pratiques en administration et gestion des réseaux informatiques.",
+    //   image: res,
+    // },
   ];
   export default events;

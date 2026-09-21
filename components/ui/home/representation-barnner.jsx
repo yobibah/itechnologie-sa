@@ -71,10 +71,9 @@ export default function RepresentationBarnner() {
     },
   ];
 
-
   const [active, setActive] = useState(0);
   const selected = pays[active];
-  const photo = selected.image
+  const photo = selected.image;
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -265,6 +264,10 @@ export default function RepresentationBarnner() {
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 33vw"
+              quality={80}
+              priority={active === 0}
+              placeholder="blur"
+              blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZTVlN2ViIi8+PC9zdmc+"
             />
           </motion.div>
         </AnimatePresence>
