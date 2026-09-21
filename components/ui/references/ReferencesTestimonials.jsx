@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const TESTIMONIAL_SLIDE_DURATION = 4000;
 
@@ -98,24 +99,24 @@ export default function ReferencesTestimonials({ references }) {
         </motion.div>
       </AnimatePresence>
 
-      <div className="flex items-center gap-4 mt-10">
+      <div className="hidden sm:flex items-center gap-4 mt-10">
         <button
           onClick={() => goTo(index - 1)}
           aria-label="Client précédent"
-          className="w-10 h-10 rounded-full border border-slate-200  flex items-center justify-center hover:bg-slate-50 transition-colors text-slate-700"
+          className="w-10 h-10 rounded-full border border-slate-200  flex items-center justify-center hover:bg-red-800 hover:text-white transition-colors text-slate-700 "
         >
-          ←
+          <ArrowLeft/>
         </button>
         <button
           onClick={() => goTo(index + 1)}
           aria-label="Client suivant"
-          className="w-10 h-10 rounded-full border border-slate-200  flex items-center justify-center hover:bg-slate-50 transition-colors text-slate-700 "
+          className="w-10 h-10 rounded-full border border-slate-200  flex items-center hover:bg-red-800 hover:text-white  justify-center  transition-colors text-slate-700 "
         >
-          →
+          <ArrowRight />
         </button>
-        <span className="text-sm font-semibold text-red-950  ml-2">
+        {/* <span className="text-lg font-semibold  ml-2">
           {index + 1} / {references.length}
-        </span>
+        </span> */}
       </div>
 
       <div className="mt-4 h-1 w-full max-w-xs bg-slate-10 rounded-full overflow-hidden">
