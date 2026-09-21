@@ -1,9 +1,9 @@
 export const solutionsInformatiques = {
   slug: 'developpement-integration',
 
-  navLabel: 'developpement integration',
+  navLabel: 'Développement & integration',
 
-  title: 'developpement integration',
+  title: 'Développement & intégration',
 
   heroTagline:
     'Des solutions informatiques fiables et adaptées aux enjeux de votre organisation.',
@@ -15,7 +15,7 @@ export const solutionsInformatiques = {
   heroImageAlt:
     'Deux ingénieurs iTechnologie intervenant sur une baie de serveurs en salle technique',
 
-  introLabel: 'developpement integration',
+  introLabel: 'Développement & integration',
 
   introTitle:
     'Des technologies au service de votre performance',
@@ -125,7 +125,7 @@ export const solutionsInformatiques = {
     {
       number: '04',
 
-      title: 'Développement et intégration de Solutions',
+      title: 'Solutions logicielles',
 
       description:
         'Nous intégrons et déployons les solutions logicielles professionnelles dont vos métiers ont besoin, en assurant l’interopérabilité avec votre système d’information et la formation des utilisateurs.',

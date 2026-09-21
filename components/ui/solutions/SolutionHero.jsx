@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion'
 
+const ease = [0.23, 1, 0.32, 1]
+
 export default function SolutionHero({
     title,
     tagline,
@@ -9,7 +11,7 @@ export default function SolutionHero({
     imageAlt,
 }) {
     return (
-        <section className="mt-10 w-full px-4 py-4 sm:px-4 sm:py-4 lg:px-6">
+        <section className="mt-6 w-full px-3 py-3 sm:mt-8 sm:px-4 sm:py-4 lg:mt-10 lg:px-6">
             <div
                 className="
                     relative
@@ -29,7 +31,7 @@ export default function SolutionHero({
                     animate={{ scale: 1 }}
                     transition={{
                         duration: 1.2,
-                        ease: [0.23, 1, 0.32, 1],
+                        ease,
                     }}
                     className="absolute inset-0 h-full w-full object-cover"
                 />
@@ -48,37 +50,37 @@ export default function SolutionHero({
                     transition={{
                         duration: 1,
                         delay: 0.2,
-                        ease: [0.23, 1, 0.32, 1],
+                        ease,
                     }}
-                    className="absolute inset-0 bg-gradient-to-r from-[#0B1A38]/45 via-[#0B1A38]/20 to-transparent"
+                    className="absolute inset-0 bg-gradient-to-r from-[#0B1A38]/55 via-[#0B1A38]/25 to-transparent"
                     aria-hidden="true"
                 />
 
                 <div className="absolute inset-0 flex items-center">
-                    <div className="mx-auto w-full max-w-shell px-6">
+                    <div className="mx-auto w-full max-w-shell px-5 sm:px-6">
                         <div className="max-w-3xl">
                             <motion.p
-                                initial={{ opacity: 0, y: 12 }}
+                                initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{
                                     duration: 0.5,
                                     delay: 0.35,
-                                    ease: [0.23, 1, 0.32, 1],
+                                    ease,
                                 }}
-                                className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E10600]"
+                                className="text-[9px] font-semibold uppercase tracking-[0.18em] text-[#E10600] sm:text-[11px] sm:tracking-[0.22em]"
                             >
                                 Nos solutions
                             </motion.p>
 
                             <motion.h1
-                                initial={{ opacity: 0, y: 22 }}
+                                initial={{ opacity: 0, y: 18 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{
                                     duration: 0.65,
                                     delay: 0.48,
-                                    ease: [0.23, 1, 0.32, 1],
+                                    ease,
                                 }}
-                                className="mt-5 text-[34px] font-semibold leading-[1.1] tracking-tight text-white sm:text-[44px] lg:text-[56px]"
+                                className="mt-2 max-w-[90%] text-[25px] font-semibold leading-[1.08] tracking-tight text-white sm:mt-4 sm:max-w-2xl sm:text-[40px] lg:mt-5 lg:max-w-3xl lg:text-[56px]"
                             >
                                 {title}
                             </motion.h1>
@@ -88,22 +90,22 @@ export default function SolutionHero({
                                 animate={{ width: 56, opacity: 1 }}
                                 transition={{
                                     duration: 0.5,
-                                    delay: 0.75,
-                                    ease: [0.23, 1, 0.32, 1],
+                                    delay: 0.7,
+                                    ease,
                                 }}
-                                className="mt-6 h-[2px] bg-[#E10600]"
+                                className="mt-3 h-[2px] bg-[#E10600] sm:mt-5 lg:mt-6"
                                 aria-hidden="true"
                             />
 
                             <motion.p
-                                initial={{ opacity: 0, y: 18 }}
+                                initial={{ opacity: 0, y: 14 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{
                                     duration: 0.6,
-                                    delay: 0.88,
-                                    ease: [0.23, 1, 0.32, 1],
+                                    delay: 0.82,
+                                    ease,
                                 }}
-                                className="mt-6 max-w-2xl text-[16px] leading-relaxed text-white/80 md:text-[18px]"
+                                className="mt-3 max-w-[95%] text-[12px] leading-[1.45] text-white/85 sm:mt-5 sm:max-w-2xl sm:text-[16px] sm:leading-[1.7] lg:mt-6 lg:text-[18px] lg:leading-relaxed"
                             >
                                 {tagline}
                             </motion.p>
@@ -118,7 +120,7 @@ export default function SolutionHero({
                         duration: 0.5,
                         delay: 1.15,
                     }}
-                    className="absolute bottom-5 right-6 hidden items-center gap-3 text-[10px] font-medium uppercase tracking-[0.2em] text-white/60 sm:flex"
+                    className="absolute bottom-4 right-5 hidden items-center gap-3 text-[10px] font-medium uppercase tracking-[0.2em] text-white/60 sm:flex lg:bottom-5 lg:right-6"
                 >
                     <span>Découvrir</span>
 
@@ -138,3 +140,4 @@ export default function SolutionHero({
         </section>
     )
 }
+
