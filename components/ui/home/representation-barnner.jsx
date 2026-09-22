@@ -256,7 +256,7 @@ export default function RepresentationBarnner() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="lg:col-span-4 relative rounded-2xl overflow-hidden min-h-[400px]"
+            className="hidden sm:flex lg:col-span-4 relative rounded-2xl overflow-hidden min-h-[400px]"
           >
             <Image
               src={photo}
