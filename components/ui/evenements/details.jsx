@@ -4,12 +4,17 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { CalendarDays, MapPin } from "lucide-react";
 import events from "../../../data/events/data";
+import { useState } from "react";
+import PhotoView from "../../photoView";
 
 export default function Details({ id }) {
   const event = events[id];
+  // const [press,setPress] = useState(false);
+  const [imge,setImge] = useState(null)
 
   if (!event) {
     return (
+ 
       <section className="flex min-h-[50vh] items-center justify-center px-4">
         <div className="text-center">
           <span className="mb-3 block text-sm font-semibold uppercase tracking-[0.2em] text-red-700">
@@ -25,6 +30,7 @@ export default function Details({ id }) {
   }
 
   return (
+         <> 
     <section className="relative w-full overflow-hidden bg-[#f7f8f9] py-16 sm:py-20 lg:py-24">
    
 
@@ -51,9 +57,27 @@ export default function Details({ id }) {
                 fill
                 priority
                 className="object-cover transition duration-700 hover:scale-[1.02]"
+                onClick={()=>setImge(event.image)}
               />
             </div>
 
+                   <div className="flex mt-10 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-4 gap-4"> 
+              {event.detailImg.length > 0 && (
+                event.detailImg.map((i,_)=>(
+                    <div  key={_}  className=" relative h-[200px] overflow-hidden sm:h-[180px] lg:h-[260px] border border-red-900 rounded-md ">
+              <Image
+                src={i}
+                alt={i}
+                fill
+                priority
+                className="object-cover transition duration-700 hover:scale-[1.02]"
+                 onClick={()=>setImge(i)}
+              />
+            </div>
+                 
+                ))
+              )}
+            </div>  
 
             <div className="absolute -bottom-5 -right-5 hidden h-24 w-24 border border-red-900/20 lg:block" />
           </motion.div>
@@ -83,13 +107,13 @@ export default function Details({ id }) {
               {event.name}
             </h1>
 
-            <div className="mb-10 border-l-2 border-gray-100 pl-6">
+            <div className="whitespace-normal mb-10 border-l-2 border-gray-100 pl-6">
               <p className="max-w-xl text-[15px] leading-8 tracking-wide text-gray-500 sm:text-base">
                 {event.desc}
               </p>
             </div>
 
-         
+            
             <div className="border-t border-gray-200 pt-8">
               <div className="grid gap-7 sm:grid-cols-2">
                 
@@ -111,7 +135,7 @@ export default function Details({ id }) {
                   </div>
                 )}
 
-                {event.location && (
+                {event.lieux && (
                   <div className="flex gap-4">
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center border border-red-900/15 bg-white text-red-700">
                       <MapPin size={20} />
@@ -123,7 +147,7 @@ export default function Details({ id }) {
                       </h3>
 
                       <p className="text-sm leading-6">
-                        {event.location}
+                        {event.lieux}
                       </p>
                     </div>
                   </div>
@@ -135,6 +159,10 @@ export default function Details({ id }) {
 
         </div>
       </div>
+
     </section>
+
+    {imge && <PhotoView img={imge} onClose={()=>setImge(null)}/>}
+    </>
   );
 }

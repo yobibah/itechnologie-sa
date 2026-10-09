@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
-const ease = [0.23, 1, 0.32, 1]
+const ease = [0.23, 1, 0.32, 1];
 
 export default function SolutionApproach({ paragraph }) {
   return (
@@ -121,5 +121,5 @@ export default function SolutionApproach({ paragraph }) {
         </div>
       </div>
     </section>
-  )
+  );
 }
