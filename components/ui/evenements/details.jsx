@@ -61,10 +61,10 @@ export default function Details({ id }) {
               />
             </div>
 
-                   <div className="flex mt-10 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-4 gap-4"> 
+                   <div className="flex mt-10 grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-4"> 
               {event.detailImg.length > 0 && (
                 event.detailImg.map((i,_)=>(
-                    <div  key={_}  className=" relative h-[200px] overflow-hidden sm:h-[180px] lg:h-[260px] border border-red-900 rounded-md ">
+                    <div  key={_}  className=" relative h-[200px] overflow-hidden sm:h-[180px] lg:h-[260px]   ">
               <Image
                 src={i}
                 alt={i}

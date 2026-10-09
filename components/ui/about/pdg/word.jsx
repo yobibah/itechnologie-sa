@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-import word from "../../../../public/images/about/dg.png";
+import word from "../../../../public/images/about/dg.jpg";
 
 export default function Word() {
   const domains = [
